@@ -351,7 +351,7 @@ void setup() {
 }
 
 /*
- *  Purpose: Initialising the state machine package
+ *  Purpose: Running the state machine package
  *  Parameters:  
  *    none
  *  Return:
