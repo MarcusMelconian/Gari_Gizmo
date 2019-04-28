@@ -10,5 +10,5 @@ Contains 4 folders:
   
   3) The Lambda Function (NodeJS)
   
-  4) The ESP8226 socket client (C++)
+  4) The ESP8266 socket client (C++)
   
