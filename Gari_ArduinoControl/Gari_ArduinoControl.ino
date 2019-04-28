@@ -142,7 +142,7 @@ void receiveEvent(int howMany) {
 /*
  * Purpose: Main processing loop
  * Parameters:  
- *    command: The command id received over websockets
+ *    command: The command received over wire from Wifi module
  * Return:
  *    void
  */
@@ -165,7 +165,7 @@ void processCall(String command){
       int gariCommandState = atoi(root[F("state")]);
 
       /*
-       * Gari command received from server printed in serial monitor
+       * Gari command received from Wifi module printed in serial monitor
        */
       Serial.print(F("New command arrived:"));      
       Serial.print(gariCommandState);
@@ -273,7 +273,7 @@ void processCall(String command){
 void setup() {
   
     /*
-     * Serial monitor and componenets are established
+     * Serial monitor and components are established
      */
     USE_SERIAL.begin(115200);
     USE_SERIAL.println();
@@ -362,7 +362,7 @@ void loop() {
 }
 
 /*
- *  Purpose: Standby state callback function after each interaction is complete
+ *  Purpose: Standby state function called after each interaction is fully complete
  *  Parameters:  
  *    none
  *  Return:
@@ -567,7 +567,7 @@ void machineLookAroundRightStart() {
 }
 
 /*
- *  Purpose: Initialising the parameters and starting the move state machine
+ *  Purpose: Initialising the parameters and starting the Move state machine
  *           Notice here how its overiding the standard set moveMachine and calling the Backward start function on completion
  *  Parameters:  
  *    none
